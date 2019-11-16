@@ -107,7 +107,7 @@ j. Client sends **Finished** message to let the server check the newly activated
 k. Server sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.<br/>
 l. Server sends **Finished** message to let the client heh the newly activated options.<br/>
 
-## cURL with SSL Authentication
+## cURL with Mutual SSL Authentication
 
 Curl does not support a combined file with keys and certificates so I had to extract and convert this data to pem format which is a format that works with curl. To extract the keys and certificates I used [OpenSSL](http://www.openssl.org/) and executed following commands in my terminal:
 ```
