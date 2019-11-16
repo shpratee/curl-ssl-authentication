@@ -33,15 +33,15 @@ sequenceDiagram
 	Server-->>Client: Finished
 	Server->>Client: aResource (encrypted with the symmetric session key)
 ```
-a. Client sends **ClientHello** message proposing SSL options.
-b. Server response with **ServeHello** message selecting the SSL options.
-c. Server sends **Certificate** message, which contains the server's certificate (which contains the public key and other information).
-d. Server concludes its part if the negotiation with **ServerHelloDone** message.
-e. Client sends session key information (encrypted with sever's public key) in **ClientKeyExchange** message.
-f. Client sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.
-g. Client sends **Finished** message to let the server check the newly activated options.
-h. Server sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.
-i. Server sends **Finished** message to let the client heh the newly activated options.
+a. Client sends **ClientHello** message proposing SSL options.<br/>
+b. Server response with **ServeHello** message selecting the SSL options.<br/>
+c. Server sends **Certificate** message, which contains the server's certificate (which contains the public key and other information).<br/>
+d. Server concludes its part if the negotiation with **ServerHelloDone** message.<br/>
+e. Client sends session key information (encrypted with sever's public key) in **ClientKeyExchange** message.<br/>
+f. Client sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.<br/>
+g. Client sends **Finished** message to let the server check the newly activated options.<br/>
+h. Server sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.<br/>
+i. Server sends **Finished** message to let the client heh the newly activated options.<br/>
 
 ## cURL with SSL Authentication
 
@@ -94,18 +94,18 @@ sequenceDiagram
 	Server-->>Client: Finished
 	Server->>Client: aResource (encrypted with the symmetric session key)
 ```
-a. Client sends **ClientHello** message proposing SSL options.
-b. Server response with **ServeHello** message selecting the SSL options.
-c. Server sends **Certificate** message, which contains the server's certificate (which contains the public key and other information).
-d. Server requests client's certificate in **CertificateRequest** message, so that the connection can be mutually authenticated.
-e. Server concludes its part if the negotiation with **ServerHelloDone** message.
-f. Client responds with **Certificate** message, which contains the client's certificate(which contains its public key and other information about client).
-g. Client sends session key information (encrypted with sever's public key) in **ClientKeyExchange** message.
-h. Client sends a **CertificateVerify** message to lt the server know it owns the sent certificate.
-i. Client sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.
-j. Client sends **Finished** message to let the server check the newly activated options.
-k. Server sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.
-l. Server sends **Finished** message to let the client heh the newly activated options.
+a. Client sends **ClientHello** message proposing SSL options.<br/>
+b. Server response with **ServeHello** message selecting the SSL options.<br/>
+c. Server sends **Certificate** message, which contains the server's certificate (which contains the public key and other information).<br/>
+d. Server requests client's certificate in **CertificateRequest** message, so that the connection can be mutually authenticated.<br/>
+e. Server concludes its part if the negotiation with **ServerHelloDone** message.<br/>
+f. Client responds with **Certificate** message, which contains the client's certificate(which contains its public key and other information about client).<br/>
+g. Client sends session key information (encrypted with sever's public key) in **ClientKeyExchange** message.<br/>
+h. Client sends a **CertificateVerify** message to lt the server know it owns the sent certificate.<br/>
+i. Client sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.<br/>
+j. Client sends **Finished** message to let the server check the newly activated options.<br/>
+k. Server sends **ChangeCipherSpec** message to activate the negotiated options for all future messages it will send.<br/>
+l. Server sends **Finished** message to let the client heh the newly activated options.<br/>
 
 ## cURL with SSL Authentication
 
