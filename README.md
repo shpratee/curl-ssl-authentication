@@ -20,16 +20,20 @@ Basic Flow:
 ```mermaid
 sequenceDiagram
 	Client->>Server: Get me the resource https://hostname:443/a-resource
-	Client-->>Server: ClientHello
-	Server-->>Client: ServerHello
+
+  Client-->>Server: ClientHello
+
+  Server-->>Client: ServerHello
 	Server-->>Client: Certificate
 	Server-->>Client: ServerHelloDone
 	Server->Client:
-	Client-->>Server: ClientKeyExchange
+
+  Client-->>Server: ClientKeyExchange
 	Client-->>Server: ChangeCipherSpec
 	Client-->>Server: Finished
 	Client->Server:
-	Server-->>Client: ChangeCipherSpec
+
+  Server-->>Client: ChangeCipherSpec
 	Server-->>Client: Finished
 	Server->>Client: aResource (encrypted with the symmetric session key)
 ```
@@ -78,19 +82,23 @@ Basic Flow:
 ```mermaid
 sequenceDiagram
 	Client->>Server: Get me the resource https://hostname:443/a-resource
+
 	Client-->>Server: ClientHello
-	Server-->>Client: ServerHello
+
+  Server-->>Client: ServerHello
 	Server-->>Client: Certificate
 	Server-->>Client: CertificateRequest
 	Server-->>Client: ServerHelloDone
 	Server->Client:
-	Client-->>Server: Certificate
+
+  Client-->>Server: Certificate
 	Client-->>Server: ClientKeyExchange
 	Client-->>Server: CertificateVerify
 	Client-->>Server: ChangeCipherSpec
 	Client-->>Server: Finished
 	Client->Server:
-	Server-->>Client: ChangeCipherSpec
+
+  Server-->>Client: ChangeCipherSpec
 	Server-->>Client: Finished
 	Server->>Client: aResource (encrypted with the symmetric session key)
 ```
